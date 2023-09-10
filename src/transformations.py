@@ -7,7 +7,7 @@ DEFAULT_RENAME_MAPPINGS = {
 }
 
 
-def filter_by_countries(df, countries=["United Kingdom", "Netherlands"]):
+def filter_by_countries(df, countries=None):
     """
     Filter client data by countries
 
@@ -19,6 +19,10 @@ def filter_by_countries(df, countries=["United Kingdom", "Netherlands"]):
     Returns:
     pandas.DataFrame: The filtered client data DataFrame
     """
+
+    if countries is None:
+        countries = ["United Kingdom", "Netherlands"]
+
     return df[df["country"].isin(countries)]
 
 

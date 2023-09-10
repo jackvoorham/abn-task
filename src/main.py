@@ -24,7 +24,7 @@ if __name__ == "__main__":
         "-dp2", help="Path to financial dataset", type=str, required=True
     )
     parser.add_argument(
-        "-c", help="List of countries to filter on", type=str, nargs="+", required=True
+        "-c", help="List of countries to filter on", type=str, nargs="+"
     )
 
     args = parser.parse_args()
