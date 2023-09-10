@@ -4,6 +4,9 @@ import pandas as pd
 from transformations import (
     filter_by_countries,
     sanitize_client_data,
+    sanitize_financial_data,
+    merge_data,
+    rename_columns,
 )
 
 logging.basicConfig(
@@ -37,4 +40,10 @@ if __name__ == "__main__":
         sanitize_client_data
     )
 
-    print(client_df_transformed.head())
+    financial_df_transformed = sanitize_financial_data(financial_df)
+
+    final_data = rename_columns(
+        merge_data(client_df_transformed, financial_df_transformed)
+    )
+
+    print(final_data.head())
