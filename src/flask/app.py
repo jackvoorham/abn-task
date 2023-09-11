@@ -17,10 +17,12 @@ def process_data():
     """
     client_data_path = request.form["dp1"]
     financial_data_path = request.form["dp2"]
-    countries = request.form["countries"].split(",")
+    countries = request.form.get("countries")
 
     if not countries:
         countries = ["United Kingdom", "Netherlands"]
+    else:
+        countries = countries.split(",")
 
     client_data, financial_data = load_data(client_data_path, financial_data_path)
 
