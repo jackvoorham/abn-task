@@ -4,7 +4,8 @@ setup(
     name="abn_task",
     version="0.1.0",
     description="ABN AMRO data processing task",
-    packages=find_packages(),
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
     install_requires=[
         "blinker==1.6.2",
         "click==8.1.7",
