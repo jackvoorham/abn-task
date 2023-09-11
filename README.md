@@ -1,6 +1,6 @@
 # ABN Interview Task
 
-This repository contains the code for the ABN assignemnt. It offers a way to process the two datasets. We have implemented a command line app and a Flask Rest API.
+This repository contains the code for the ABN assignment. It offers a way to process the two datasets. We have implemented a command line app and a Flask Rest API.
 
 ## Folder Structure
 
@@ -83,3 +83,13 @@ Calling this endpoint will result in the processed data.
 - **GET /download_data**  
   You can download the processed data file by visiting this URL in your browser:
   [http://127.0.0.1:5000/download_data](http://127.0.0.1:5000/download_data)
+
+### Running The Tests
+
+Tests are available for the transformation functions. To run the tests run in the command line:
+
+```sh
+pytest tests/test_transformations.py
+```
+
+Which will output a report of all test functions.
