@@ -39,3 +39,18 @@ def test_sanitize_client_data():
     assert result.shape == (3, 1)
     assert "first_name" not in result.columns
     assert "last_name" not in result.columns
+
+
+def test_sanitize_financial_data():
+    test_data = pd.DataFrame(
+        {
+            "id": [1, 2, 3, 4],
+            "cc_n": ["1234", "5678", "9012", "3456"],
+        }
+    )
+
+    result = sanitize_financial_data(test_data)
+
+    # Assert properties
+    assert result.shape == (4, 1)
+    assert "cc_n" not in result.columns
