@@ -11,6 +11,7 @@ As for a high level overview of the core logic of the app the following steps ar
 - **README.md** - This file
 - **requirements.txt** - Requirements to run scripts
 - **.gitignore**
+- **logs/** - Folder to store log files
 - **client_data/**
   - **data.csv** - The final, processed dataset
 - **raw_data/**
