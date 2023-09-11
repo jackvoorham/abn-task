@@ -2,6 +2,10 @@
 
 This repository contains the code for the ABN assignment. It offers a way to process the two datasets. We have implemented a command line app and a Flask Rest API.
 
+## High Level Overview
+
+As for a high level overview of the core logic of the app the following steps are done. First, we load the datasets. Then, the datasets are sanizitzed, removing Personal Identifiable Information. We remove the first and second name from the first dataset and credit card number from the second dataset. Subsequently, the first dataset undergoes a filtering process to only retain the data of clients in specified countries. In our case, the default is the UK and The Netherlands. Then the sanitized datasets are merged together on the **id** field. After this, we rename the columns to improve readability of the dataset for users.
+
 ## Folder Structure
 
 - **README.md** - This file
@@ -84,7 +88,7 @@ Calling this endpoint will result in the processed data.
   You can download the processed data file by visiting this URL in your browser:
   [http://127.0.0.1:5000/download_data](http://127.0.0.1:5000/download_data)
 
-### Running The Tests
+## Running The Tests
 
 Tests are available for the transformation functions. To run the tests run in the command line:
 
