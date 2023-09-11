@@ -98,3 +98,19 @@ pytest tests/test_transformations.py
 ```
 
 Which will output a report of all test functions.
+
+### Running Package
+
+To run the package, first run the setup. In root run:
+
+```sh
+pip install .
+```
+
+Then one can run the command line application using:
+
+```sh
+abn_task --help
+```
+
+Which shows how to run the command line app.
