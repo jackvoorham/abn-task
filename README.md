@@ -43,7 +43,7 @@ pip install -r requirements.txt
 To run the command line app, we can run from root:
 
 ```sh
-python src/main.py -dp1 ./raw_data/dataset_one.csv -dp2 ./raw_data/dataset_two.csv -c "United Kingdom,Netherlands"
+python3 src/main.py -dp1 ./raw_data/dataset_one.csv -dp2 ./raw_data/dataset_two.csv -c "United Kingdom" "Netherlands" "France"
 ```
 
 Where
