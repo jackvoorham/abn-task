@@ -8,6 +8,17 @@ from transformations import (
 
 
 def transform_data(client_df, financial_df, countries):
+    """
+    Transform the client and financial data into the final data set
+
+    Parameters:
+    client_df (pandas.DataFrame): The client data DataFrame
+    financial_df (pandas.DataFrame): The financial data DataFrame
+
+    Returns:
+    pandas.DataFrame: The final data set
+    """
+
     client_df_transformed = client_df.pipe(filter_by_countries, countries).pipe(
         sanitize_client_data
     )
