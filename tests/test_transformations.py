@@ -9,6 +9,9 @@ from src.transformations import (
 
 
 def test_filter_by_countries():
+    """
+    Test the filter_by_countries function
+    """
     test_data = pd.DataFrame(
         {
             "id": [1, 2, 3, 4],
@@ -25,6 +28,9 @@ def test_filter_by_countries():
 
 
 def test_sanitize_client_data():
+    """
+    Test the sanitize_client_data function
+    """
     test_data = pd.DataFrame(
         {
             "id": [1, 2, 3],
@@ -42,6 +48,9 @@ def test_sanitize_client_data():
 
 
 def test_sanitize_financial_data():
+    """
+    Test the sanitize_financial_data function
+    """
     test_data = pd.DataFrame(
         {
             "id": [1, 2, 3, 4],
@@ -57,6 +66,9 @@ def test_sanitize_financial_data():
 
 
 def test_merge_data():
+    """
+    Test the merge_data function
+    """
     test_data1 = pd.DataFrame(
         {
             "id": [1, 2, 3],
@@ -82,6 +94,9 @@ def test_merge_data():
 
 
 def test_rename_columns():
+    """
+    Test the rename_columns function
+    """
     test_data = pd.DataFrame(
         {
             "id": [1, 2, 3],
