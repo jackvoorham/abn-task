@@ -30,5 +30,18 @@ def process_data():
     return "Data process complete", 200
 
 
+@app.route("/download_data", methods=["GET"])
+def download_data():
+    """
+    Download the processed data from the client_data directory
+    """
+    base_dir = os.path.dirname(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    )
+    client_data_dir = os.path.join(base_dir, "client_data")
+
+    return send_from_directory(client_data_dir, "data.csv", as_attachment=True)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
