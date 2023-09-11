@@ -79,3 +79,21 @@ def test_merge_data():
     assert "btc_a" in result.columns
     assert "cc_t" in result.columns
     assert result.shape[0] == 3
+
+
+def test_rename_columns():
+    test_data = pd.DataFrame(
+        {
+            "id": [1, 2, 3],
+            "btc_a": ["0xabc", "0xdef", "0xghi"],
+            "cc_t": ["Visa", "MasterCard", "Amex"],
+        }
+    )
+
+    result = rename_columns(test_data)
+
+    # Assert properties
+    assert "client_identifier" in result.columns
+    assert "bitcoin_address" in result.columns
+    assert "credit_card_type" in result.columns
+    assert result.shape[0] == 3
