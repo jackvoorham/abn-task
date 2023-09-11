@@ -5,6 +5,7 @@ This repository contains the code for the ABN assignemnt. It offers a way to pro
 ## Folder Structure
 
 - **README.md** - This file
+- **requirements.txt** - Requirements to run scripts
 - **.gitignore**
 - **client_data/**
   - **data.csv** - The final, processed dataset
