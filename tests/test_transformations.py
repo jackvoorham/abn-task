@@ -54,3 +54,28 @@ def test_sanitize_financial_data():
     # Assert properties
     assert result.shape == (4, 1)
     assert "cc_n" not in result.columns
+
+
+def test_merge_data():
+    test_data1 = pd.DataFrame(
+        {
+            "id": [1, 2, 3],
+            "email": ["john@example.com", "jane@example.com", "mary@example.com"],
+        }
+    )
+
+    test_data2 = pd.DataFrame(
+        {
+            "id": [1, 2, 3],
+            "btc_a": ["0xabc", "0xdef", "0xghi"],
+            "cc_t": ["Visa", "MasterCard", "Amex"],
+        }
+    )
+
+    result = merge_data(test_data1, test_data2)
+
+    # Assert properties
+    assert "email" in result.columns
+    assert "btc_a" in result.columns
+    assert "cc_t" in result.columns
+    assert result.shape[0] == 3
