@@ -1,8 +1,8 @@
 import os
 import logging
-from logging_config import setup_logging
-from data_processing import transform_data
-from utils import parse_arguments, load_data, save_data
+from .logging_config import setup_logging
+from .data_processing import transform_data
+from .utils import parse_arguments, load_data, save_data
 
 
 def main():
