@@ -99,7 +99,7 @@ pytest tests/test_transformations.py
 
 Which will output a report of all test functions.
 
-### Running Package
+### Running Package [WIP, Does work on feature/packing branch]
 
 To run the package, first run the setup. In root run:
 
